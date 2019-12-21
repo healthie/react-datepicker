@@ -351,6 +351,7 @@ export default class Calendar extends React.Component {
         type="button"
         className={classes.join(" ")}
         onClick={clickHandler}
+        aria-label={"Previous Month"}
       >
         {this.props.previousMonthButtonLabel}
       </button>
@@ -400,6 +401,7 @@ export default class Calendar extends React.Component {
         type="button"
         className={classes.join(" ")}
         onClick={clickHandler}
+        aria-label="Next Month"
       >
         {this.props.nextMonthButtonLabel}
       </button>
@@ -500,9 +502,7 @@ export default class Calendar extends React.Component {
     <div className="react-datepicker__header">
       {this.renderCurrentMonth(monthDate)}
       <div
-        className={`react-datepicker__header__dropdown react-datepicker__header__dropdown--${
-          this.props.dropdownMode
-        }`}
+        className={`react-datepicker__header__dropdown react-datepicker__header__dropdown--${this.props.dropdownMode}`}
         onFocus={this.handleDropdownFocus}
       >
         {this.renderMonthDropdown(i !== 0)}
